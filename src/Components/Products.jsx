@@ -1,9 +1,9 @@
 'use client'
 import { motion } from 'framer-motion'
 import Link from 'next/link'
-import { products } from '@/Components/Data/products'
+import { products } from '@/components/Data/products'
 import { Star, ShoppingCart, ArrowRight } from 'lucide-react'
-import { useCart } from '@/Components/Context/CartContext'
+import { useCart } from '@/components/Context/CartContext'
 import toast from 'react-hot-toast'
 
 const Products = () => {

@@ -1,7 +1,7 @@
 'use client'
 import { motion } from 'framer-motion'
 import Link from 'next/link'
-import { categories } from '@/Components/Data/categories'
+import { categories } from '@/components/Data/categories'
 
 const Categories = () => {
   return (

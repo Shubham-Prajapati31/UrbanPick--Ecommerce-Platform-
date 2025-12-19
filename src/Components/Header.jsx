@@ -3,7 +3,7 @@ import { motion, AnimatePresence } from 'framer-motion'
 import Link from 'next/link'
 import { ShoppingCart, Menu, X, Search, Heart, User } from 'lucide-react'
 import { useState, useRef, useEffect } from 'react'
-import { useCart } from '@/Components/Context/CartContext'
+import { useCart } from '@/components/Context/CartContext'
 
 const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false)

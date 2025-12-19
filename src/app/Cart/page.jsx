@@ -1,4 +1,4 @@
-import CartPage from "@/Components/Cart";
+import CartPage from "@/components/Cart";
 
 
 export default function Home() {

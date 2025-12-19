@@ -1,6 +1,6 @@
 'use client'
 import { motion, AnimatePresence } from 'framer-motion'
-import { useCart } from '@/Components/Context/CartContext'
+import { useCart } from '@/components/Context/CartContext'
 import Link from 'next/link'
 import { X } from 'lucide-react'
 import Image from 'next/image'
