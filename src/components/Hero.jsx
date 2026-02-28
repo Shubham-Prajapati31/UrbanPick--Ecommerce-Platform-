@@ -14,7 +14,7 @@ const Hero = () => {
         className="absolute inset-0"
       >
         <Image
-          src="/images/hero.png" //new image path
+          src="/images/hero2.png" //new image path
           alt="Featured Banner"
           fill
           // mobile: shift a little left, desktop: normal center
