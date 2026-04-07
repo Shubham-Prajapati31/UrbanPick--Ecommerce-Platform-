@@ -13,9 +13,9 @@ export const products = [
     isNew: true,
     image: '/images/image_headphone.png',
     images: [
-      '/images/headphones.jpg',
-      '/images/headphones-2.jpg',
-      '/images/headphones-3.jpg'
+      '/images/image_headphone.png',
+      '/images/image_headphone.png',
+      '/images/image_headphone.png'
     ],
     specifications: {
       'Color': 'Black',
@@ -37,9 +37,9 @@ export const products = [
     isNew: false,
     image: '/images/asus_laptop_image.png',
     images: [
-      '/images/smartwatch.jpg',
-      '/images/smartwatch-2.jpg',
-      '/images/smartwatch-3.jpg'
+      '/images/asus_laptop_image.png',
+      '/images/asus_laptop_image.png',
+      '/images/asus_laptop_image.png'
     ],
     specifications: {
       'Color': 'Midnight Black',
@@ -62,9 +62,9 @@ export const products = [
     isNew: false,
     image: '/images/md_controller_image.png',
     images: [
-      '/images/tshirt.jpg',
-      '/images/tshirt-2.jpg',
-      '/images/tshirt-3.jpg'
+      '/images/md_controller_image.png',
+      '/images/md_controller_image.png',
+      '/images/md_controller_image.png'
     ],
     specifications: {
       'Color': 'White',
@@ -86,9 +86,9 @@ export const products = [
     isNew: true,
     image: '/images/playstation_image.png',
     images: [
-      '/images/waterbottle.jpg',
-      '/images/waterbottle-2.jpg',
-      '/images/waterbottle-3.jpg'
+      '/images/playstation_image.png',
+      '/images/playstation_image.png',
+      '/images/playstation_image.png'
     ],
     specifications: {
       'Capacity': '750ml',
@@ -111,9 +111,9 @@ export const products = [
     isNew: false,
     image: '/images/projector_image.png',
     images: [
-      '/images/charger.jpg',
-      '/images/charger-2.jpg',
-      '/images/charger-3.jpg'
+      '/images/projector_image.png',
+      '/images/projector_image.png',
+      '/images/projector_image.png'
     ],
     specifications: {
       'Output': '10W',
@@ -135,9 +135,9 @@ export const products = [
     isNew: false,
     image: '/images/samsung_s23phone_image.png',
     images: [
-      '/images/charger.jpg',
-      '/images/charger-2.jpg',
-      '/images/charger-3.jpg'
+      '/images/samsung_s23phone_image.png',
+      '/images/samsung_s23phone_image.png',
+      '/images/samsung_s23phone_image.png'
     ],
     specifications: {
       'Output': '10W',
@@ -159,9 +159,9 @@ export const products = [
     isNew: false,
     image: '/images/sony_airbuds_image.png',
     images: [
-      '/images/wallet.jpg',
-      '/images/wallet-2.jpg',
-      '/images/wallet-3.jpg'
+      '/images/sony_airbuds_image.png',
+      '/images/sony_airbuds_image.png',
+      '/images/sony_airbuds_image.png'
     ],
     specifications: {
       'Material': 'Genuine Leather',
@@ -184,9 +184,9 @@ export const products = [
     isNew: true,
     image: '/images/venu_watch_image.png',
     images: [
-      '/images/blender.jpg',
-      '/images/blender-2.jpg',
-      '/images/blender-3.jpg'
+      '/images/venu_watch_image.png',
+      '/images/venu_watch_image.png',
+      '/images/venu_watch_image.png'
     ],
     specifications: {
       'Power': '1500W',

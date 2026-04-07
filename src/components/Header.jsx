@@ -4,6 +4,7 @@ import Link from 'next/link'
 import { ShoppingCart, Menu, X, Search, Heart, User } from 'lucide-react'
 import { useState, useRef, useEffect } from 'react'
 import { useCart } from '@/components/Context/CartContext'
+import { useWishlist } from '@/components/Context/WishlistContext'
 
 const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false)
@@ -12,6 +13,7 @@ const Header = () => {
   const [isCartOpen, setIsCartOpen] = useState(false)
 
   const { cartItems } = useCart()
+  const { wishlistCount } = useWishlist()
 
   const searchRef = useRef(null)
   const userDropdownRef = useRef(null)
@@ -140,9 +142,11 @@ const Header = () => {
               aria-label="Wishlist"
             >
               <Heart className="h-5 w-5 sm:h-6 sm:w-6" />
-              <span className="absolute -top-1 -right-1 bg-pink-500 text-white text-xs font-bold rounded-full h-4 w-4 flex items-center justify-center">
-                3
-              </span>
+              {wishlistCount > 0 && (
+                <span className="absolute -top-1 -right-1 bg-pink-500 text-white text-xs font-bold rounded-full h-4 w-4 flex items-center justify-center">
+                  {wishlistCount}
+                </span>
+              )}
             </Link>
 
             {/* User Dropdown */}

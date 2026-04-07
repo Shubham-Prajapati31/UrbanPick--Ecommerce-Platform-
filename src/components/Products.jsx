@@ -2,12 +2,14 @@
 import { motion } from 'framer-motion'
 import Link from 'next/link'
 import { products } from '@/components/Data/products'
-import { Star, ShoppingCart, ArrowRight } from 'lucide-react'
+import { Star, ShoppingCart, ArrowRight, Heart } from 'lucide-react'
 import { useCart } from '@/components/Context/CartContext'
+import { useWishlist } from '@/components/Context/WishlistContext'
 import toast from 'react-hot-toast'
 
 const Products = () => {
   const { addToCart } = useCart()
+  const { toggleWishlist, isInWishlist } = useWishlist()
 
   const handleAddToCart = (product) => {
     addToCart(product)
@@ -62,20 +64,33 @@ const Products = () => {
               
               <div className="h-full bg-white rounded-2xl overflow-hidden shadow-sm hover:shadow-xl transition-all duration-300 border border-gray-100">
                 {/* Product Image */}
-                <Link href={`/products/${product.id}`} className="block relative">
-                  <div className="relative pt-[100%] bg-gray-100 overflow-hidden">
-                    <img 
-                      src={product.image} 
-                      alt={product.name} 
-                      className="absolute top-0 left-0 w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
-                    />
-                    {product.isNew && (
-                      <span className="absolute top-3 right-3 bg-indigo-600 text-white text-xs font-bold px-3 py-1 rounded-full shadow-md">
-                        New Arrival
-                      </span>
-                    )}
-                  </div>
-                </Link>
+                <div className="relative">
+                  <Link href={`/products/${product.id}`} className="block relative">
+                    <div className="relative pt-[100%] bg-gray-100 overflow-hidden">
+                      <img 
+                        src={product.image} 
+                        alt={product.name} 
+                        className="absolute top-0 left-0 w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
+                      />
+                      {product.isNew && (
+                        <span className="absolute top-3 left-3 bg-indigo-600 text-white text-xs font-bold px-3 py-1 rounded-full shadow-md z-10">
+                          New Arrival
+                        </span>
+                      )}
+                    </div>
+                  </Link>
+                  <button
+                    onClick={(e) => {
+                      e.preventDefault();
+                      toggleWishlist(product);
+                    }}
+                    className={`absolute top-3 right-3 z-10 p-2 rounded-full shadow-md transition-colors ${
+                      isInWishlist(product.id) ? 'bg-white text-pink-500' : 'bg-white text-gray-400 hover:text-pink-500'
+                    }`}
+                  >
+                    <Heart className={`h-5 w-5 ${isInWishlist(product.id) ? 'fill-pink-500' : ''}`} />
+                  </button>
+                </div>
 
                 {/* Product Info */}
                 <div className="p-5">
